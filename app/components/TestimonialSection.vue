@@ -7,32 +7,26 @@ const activeTestimonial = computed(() => testimonials[activeIndex.value])
 </script>
 
 <template>
-  <section class="py-24 px-[9%]">
-    <div class="rounded-3xl  p-16 shadow-xl">
-      <div class=" flex justify-center gap-12 items-center bg-green-200">
-        <div class="w-[35%] bg-yellow-200">
-            <div class="relative  h-[280px] w-[250px] bg-red-200 ">
-          <NuxtImg 
-            :src="BackgroundImage" 
-            alt="background pattern"
-            class="absolute inset-0 w-full h-full object-cover opacity-20 z-0"
-          />
+  <section class="py-24 bg-gray-100 px-4 md:px-[9%] md:py-[5%]">
+    <div class="rounded-3xl border-[0.5px] bg-white p-4 md:p-16 shadow-xl">
+      <div class=" flex md:flex-row flex-col  justify-center gap-12 items-center">
+        <div class="md:w-[40%] w-full flex justify-center md:justify-end">
+          <div class="relative  h-[280px] w-[250px]  ">
+            <NuxtImg :src="BackgroundImage" alt="background pattern"
+              class="absolute inset-0 w-full h-full object-cover opacity-20 z-0" />
 
-          <img 
-            :src="activeTestimonial?.image" 
-            :alt="activeTestimonial?.name"
-            class="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 object-cover"
-          />
+            <img :src="activeTestimonial?.image" :alt="activeTestimonial?.name"
+              class="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 object-cover" />
+          </div>
         </div>
-        </div>
-      
 
-        <div class="w-[full] %]">
+
+        <div class="md:w-60%] w-full">
           <div class="mb-6">
-            <NuxtImg :src="QuotesImage" alt="quotes image" />
+            <NuxtImg :src="QuotesImage" alt="quotes image" width="60" height="60" />
           </div>
 
-          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          <p class="text-sm text-gray-900 leading-relaxed mb-6">
             {{ activeTestimonial?.comment }}
           </p>
 

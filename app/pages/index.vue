@@ -1,18 +1,21 @@
 <script setup lang="ts">
-import HeroSection from '~/components/HeroSection.vue';
-import ServicesSection from '~/components/ServicesSection.vue';
-import TestimonialSection from '~/components/TestimonialSection.vue';
-import WhyUsSection from '~/components/WhyUsSection.vue';
-import CtaSection from '~/components/CtaSection.vue';
+import { useHead } from '#imports'
+
+useHead({
+  title: 'Sycamore Finance Landing Page Test',
+  meta: [
+    { name: 'description', content: 'This is a simple landing page for Nuxt 4 test' }
+  ]
+})
 </script>
 
 <template>
-  <main class=" w-screen min-h-screen bg-white">
+  <div class="w-screen min-h-screen bg-white">
     <AppNavbar />
     <HeroSection />
     <ServicesSection />
     <CtaSection />
     <WhyUsSection />
     <TestimonialSection />
-  </main>
+  </div>
 </template>

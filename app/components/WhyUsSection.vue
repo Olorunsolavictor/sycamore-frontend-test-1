@@ -20,7 +20,6 @@ onBeforeUnmount(() => {
 
 <template>
   <section class="grid py-24 bg-white  font-sans grid-cols-1 px-4 md:px-[9%] lg:grid-cols-2 gap-16 items-center">
-    <!-- LEFT CONTENT -->
     <div>
       <p class="text-sm font-semibold tracking-widest text-green-500">
         {{ whyChooseUs[activeIndex]?.header }}
@@ -43,7 +42,6 @@ onBeforeUnmount(() => {
       </ul>
     </div>
 
-    <!-- RIGHT IMAGES -->
     <div class="flex items-center gap-6 h-[420px]">
       <div v-for="(item, index) in whyChooseUs" :key="index"
         class="relative h-full rounded-3xl overflow-hidden transition-all duration-700" :class="index === activeIndex
@@ -52,7 +50,6 @@ onBeforeUnmount(() => {
           ">
         <img :src="item.image" class="h-full w-full object-cover" alt="" />
 
-        <!-- Progress bar (only active) -->
         <div v-if="index === activeIndex"
           class="absolute bottom-4 rounded  left-4 h-2 z-20 bg-white/40 animate-progress" />
       </div>
