@@ -5,16 +5,15 @@ import GreenString2 from "@/assets/images/hero-section/svgs/green-string-2.svg"
 
 
 <template>
-  <section class="relative w-full min-h-screen overflow-hidden flex justify-center items-center bg-[#1F2537] p-20">
-    <div class="container w-full h-full bg-green-200 px-6 grid grid-cols-2 items-center">
-      <!-- LEFT CONTENT -->
-      <div class="relative bg-blue-400  z-10">
-        <h1 class="text-4xl md:text-6xl font-bold leading-tight text-white">
+  <section class="relative w-full min-h-screen overflow-hidden flex justify-center items-center bg-[#1f2334] p-20">
+    <div class="container w-full h-full  px-6 grid grid-cols-2 items-center">
+      <div class="relative   z-10">
+        <h1 class="text-4xl md:text-6xl md:leading-relaxed font-sans font-bold leading-relaxed text-white">
           Financial Security <br />
           Made
-          <span class="relative text-green-400">
+          <span class="relative text-[#b2eda1]">
             Accountable
-            <span class="absolute left-0 -bottom-2 h-1 w-full bg-green-400/80" />
+            <span class="absolute left-0 -bottom-2 h-1 w-full bg-[#b2eda1]" />
           </span>
         </h1>
 
@@ -38,29 +37,27 @@ import GreenString2 from "@/assets/images/hero-section/svgs/green-string-2.svg"
         </div>
       </div>
 
-      <!-- RIGHT MEDIA -->
-      <div class="relative bg-red-400">
-        <!-- Image Card -->
-        <div class="relative overflow-hidden rounded-3xl shadow-2xl bg-black/20">
-          <video controls width="600">
+      <div class="relative">
+        <div class="relative z-10 overflow-hidden  rounded-[30px] shadow-2xl bg-black/20">
+
+          <video loop="true">
             <source src="/videos/introduction.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
 
-          <!-- Play / Pause Button -->
           <button
             class="absolute bottom-6 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-900 shadow-lg"
             aria-label="Pause video">
             ❚❚
           </button>
+
         </div>
+        <img :src="GreenString1" alt="Green string 1" class="absolute top-4">
+        <img :src="GreenString2" alt="Green string 2" class="absolute -top-[300px] -left-[60px] z-20">
       </div>
     </div>
 
-    <!-- DECORATIVE ELEMENTS -->
-    <div
-      class="pointer-events-none absolute -right-32 top-1/2 h-[600px] w-[600px] -translate-y-1/2 rounded-full border-[6px] border-green-400/80" />
 
     <div class="pointer-events-none absolute left-20 top-32 h-6 w-6 rounded-full bg-green-400/40" />
     <div class="pointer-events-none absolute left-40 top-64 h-4 w-4 rounded-full bg-green-400/30" />

@@ -2,9 +2,8 @@
 import HeroSection from '~/components/HeroSection.vue';
 import ServicesSection from '~/components/ServicesSection.vue';
 import TestimonialSection from '~/components/TestimonialSection.vue';
-import ServiceCard from '~/components/ui/ServiceCard.vue';
 import WhyUsSection from '~/components/WhyUsSection.vue';
-
+import CtaSection from '~/components/CtaSection.vue';
 </script>
 
 <template>
