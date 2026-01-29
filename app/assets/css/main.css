@@ -9,5 +9,5 @@
 
 .animate-progress {
   animation: progress 3s linear;
-  width: 50%;
+  width: 100%;
 }

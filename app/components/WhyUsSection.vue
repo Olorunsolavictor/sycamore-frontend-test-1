@@ -19,24 +19,24 @@ onBeforeUnmount(() => {
 
 
 <template>
-  <section class="grid py-24 bg-white  font-sans grid-cols-1 px-4 md:px-[9%] lg:grid-cols-2 gap-16 items-center">
+  <section class="grid  py-12 md:py-24 bg-white  font-sans grid-cols-1 px-4 md:px-[9%] lg:grid-cols-2 gap-16 items-center">
     <div>
-      <p class="text-sm font-semibold tracking-widest text-green-500">
+      <p class="md:text-sm text-xs font-semibold tracking-widest text-green-500">
         {{ whyChooseUs[activeIndex]?.header }}
       </p>
 
-      <h2 class="mt-4 text-[40px] leading-[50px] font-bold text-gray-900">
+      <h2 class="mt-4 md:text-[40px] text-[36px] md:leading-[50px] leading-tight  font-bold text-gray-900">
         {{ whyChooseUs[activeIndex]?.title }}
       </h2>
 
-      <p class="mt-6 text-gray-600 leading-relaxed">
+      <p class="mt-6 text-gray-600  leading-relaxed">
         {{ whyChooseUs[activeIndex]?.description }}
       </p>
 
       <ul class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
         <li v-for="feature in whyChooseUs[activeIndex]?.features" :key="feature"
           class="flex items-center gap-2 text-gray-700">
-          <span class="text-green-500">✔</span>
+          <span class="text-green-500 ">✔</span>
           {{ feature }}
         </li>
       </ul>

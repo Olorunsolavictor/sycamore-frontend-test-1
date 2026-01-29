@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { services } from "@/data/services"
-import ServiceCard from "./ui/ServiceCard.vue";
+import ServiceCard from "./ServiceCard.vue";
 </script>
 
 <template>
-  <section class="lg:py-28 py-14">
+  <section class="lg:py-28 bg-white py-14">
     <div class="container mx-auto px-4 ">
       <div
-        class="grid grid-cols-1 p-4 gap-4 lg:gap-8 md:grid-cols-3"
+        class="grid grid-cols-1 md:p-4 gap-6 lg:gap-8 md:grid-cols-3"
       >
         <ServiceCard
           v-for="(service, index) in services"

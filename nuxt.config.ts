@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/google-fonts"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/google-fonts",'@vueuse/motion/nuxt'],
   css: ["~/assets/css/main.css"],
 
   tailwindcss: {
