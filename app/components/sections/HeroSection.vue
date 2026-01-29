@@ -58,7 +58,7 @@ const { videoRef, isPlaying, toggle } = useVideoControl()
       <div class="relative">
         <div class="relative z-10 overflow-hidden  rounded-[30px] shadow-2xl bg-black/20">
 
-          <video ref="videoRef" autoplay muted loop playsinline>
+          <video ref="videoRef" muted loop playsinline>
             <source src="/videos/introduction.mp4" type="video/mp4" />
           </video>
 
