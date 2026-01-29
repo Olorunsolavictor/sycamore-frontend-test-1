@@ -23,13 +23,13 @@ defineProps<{
 
     <div class="mt-[70px] flex items-center justify-between">
       <span
-        class="font-medium text-gray-700 transition-colors group-hover:text-[#44c486]"
+        class="font-medium text-gray-700 transition-colors group-hover:text-green-primary"
       >
         Learn more
       </span>
 
       <span
-        class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 group-hover:bg-[#44c486] group-hover:text-white transition-transform duration-300 origin-center group-hover:rotate-[-30deg]"
+        class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 group-hover:bg-green-primary group-hover:text-white transition-transform duration-300 origin-center group-hover:rotate-[-30deg]"
       >
         →
       </span>

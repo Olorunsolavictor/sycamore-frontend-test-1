@@ -21,11 +21,11 @@ onBeforeUnmount(() => {
 <template>
   <section class="grid  py-12 md:py-24 bg-white  font-sans grid-cols-1 px-4 md:px-[9%] lg:grid-cols-2 gap-16 items-center">
     <div>
-      <p class="md:text-sm text-xs font-semibold tracking-widest text-green-500">
+      <p class="md:text-sm text-xs font-semibold tracking-widest text-green-primary">
         {{ whyChooseUs[activeIndex]?.header }}
       </p>
 
-      <h2 class="mt-4 md:text-[40px] text-[36px] md:leading-[50px] leading-tight  font-bold text-gray-900">
+      <h2 class="mt-4 md:text-[40px] text-[36px] md:leading-[50px] leading-tight  font-bold text-primary-dark">
         {{ whyChooseUs[activeIndex]?.title }}
       </h2>
 

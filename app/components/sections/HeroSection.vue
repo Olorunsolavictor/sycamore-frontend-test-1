@@ -9,8 +9,6 @@ const { currentWord, progress } = useRotatingText(
 const { videoRef, isPlaying, toggle } = useVideoControl()
 </script>
 
-
-
 <template>
   <section
     class="relative w-full min-h-[94vh] overflow-hidden flex justify-center items-center bg-[#1f2334] px-2 py-[32%] md:p-20">
@@ -19,10 +17,10 @@ const { videoRef, isPlaying, toggle } = useVideoControl()
         <h1 class="text-4xl md:text-6xl md:leading-relaxed font-sans font-bold leading-relaxed text-white">
           Financial Security <br />
           Made
-          <span class="relative inline-block text-[#b2eda1]">
+          <span class="relative inline-block text-green-secondary">
             {{ currentWord() }}
 
-            <span class="absolute left-0 -bottom-1 h-2 bg-[#b2eda1] transition-[width]"
+            <span class="absolute left-0 -bottom-1 h-2 bg-green-secondary transition-[width]"
               :style="{ width: progress + '%' }" />
           </span>
 
@@ -35,20 +33,20 @@ const { videoRef, isPlaying, toggle } = useVideoControl()
 
         <div class="mt-10 flex items-center gap-6">
           <AppButton :title="`Get started for free`"
-            class="rounded-full bg-[#44c486] px-4 md:px-8 md:py-4 py-3 md:text-base text-xs font-semibold text-white hover:bg-[#b2eda1] hover:text-black ease-in-out duration-300 transition-all">
+            class="rounded-full bg-green-primary px-4 md:px-8 md:py-4 py-3 md:text-base text-xs font-semibold text-white hover:bg-green-secondary hover:text-black ease-in-out duration-300 transition-all">
             Get Start For Free
           </AppButton>
 
           <AppButton :title="`Let's talk`" class="group flex items-center gap-2 px-4 md:px-8 md:py-4 py-3 md:text-base text-xs 
          text-white font-medium transition-colors duration-300
-         hover:text-green-400">
+         hover:text-green-primary">
             Let’s talk
 
             <span class="flex h-8 w-8 items-center justify-center rounded-full
            bg-white/10 text-white
            transition-all duration-300
-           group-hover:bg-green-400
-           group-hover:text-[#1f2334]
+           group-hover:bg-green-primary
+           group-hover:text-primary-dark
            group-hover:rotate-[-30deg]">
               →
             </span>
@@ -66,7 +64,7 @@ const { videoRef, isPlaying, toggle } = useVideoControl()
 
           <AppButton @click="toggle" :loading="false" textStyle="text-lg font-bold"
             :title="isPlaying ? 'Pause' : 'Play'"
-            class="absolute bottom-6 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-white text-[#b2eda1] shadow-lg"
+            class="absolute bottom-6 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-white text-green-secondary shadow-lg"
             aria-label="Toggle video">
             <span v-if="isPlaying">❚❚</span>
             <span v-else>▶</span>

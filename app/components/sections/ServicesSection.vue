@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { services } from "@/data/services"
-import ServiceCard from "./ServiceCard.vue";
 </script>
 
 <template>

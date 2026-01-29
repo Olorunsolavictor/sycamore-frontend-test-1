@@ -1,10 +1,8 @@
 <template>
   <div>
-    <NuxtPage />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
-<style>
-html {
-  @apply font-sans;
-}
-</style>
+<style></style>

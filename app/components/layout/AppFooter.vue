@@ -1,47 +1,18 @@
 <script setup lang="ts">
 import Logo from "@/assets/images/general/app-logo.svg"
 
-import FacebookIcon from "@/assets/images/footer/footer-icon-facebook.png"
-import TwitterIcon from "@/assets/images/footer/footer-icon-x.svg"
-import PinterestIcon from "@/assets/images/footer/footer-icon-pinterest.svg"
-import MailIcon from "@/assets/images/footer/footer-icon-mail.svg"
-import InstagramIcon from "@/assets/images/footer/footer-icon-instagram.svg"
+
+import { useFooterData } from "~/composables/useFooterData"
 
 const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" })
 
-const socialLinks = [
-  { href: "#", icon: FacebookIcon },
-  { href: "#", icon: TwitterIcon },
-  { href: "#", icon: PinterestIcon },
-  { href: "#", icon: MailIcon },
-  { href: "#", icon: InstagramIcon },
-]
+const { socialLinks, footerSections, bottomLinks } = useFooterData()
 
-const footerSections = [
-  {
-    title: "PRODUCTS 🔥",
-    links: ["HR Management", "Invoice System", "Email Marketing", "Web Services", "Digital Marketing"],
-  },
-  {
-    title: "WHY CHOOSE ✨",
-    links: ["Customers", "Why Staco ?", "Book a demo"],
-  },
-  {
-    title: "RESOURCES ➕",
-    links: ["Latest Blog", "Supports", "Knowledgebase", "FAQs"],
-  },
-  {
-    title: "COMPANY 💎",
-    links: ["About", "What we do", "Contact us", "Careers"],
-  },
-]
-
-const bottomLinks = ["Terms and conditions", "Cookies", "Privacy policy"]
 </script>
 
 <template>
   <footer class="px-2 bg-gray-100 font-sans">
-    <div class="bg-[#1f2334] text-gray-300 rounded-[30px] mx-2 md:mx-4 mt-8 px-10 md:px-[70px] py-10 pt-[120px]">
+    <div class="bg-primary-dark text-gray-300 rounded-[30px] mx-2 md:mx-4 mt-8 px-10 md:px-[70px] py-10 pt-[120px]">
       <div class="max-w-7xl mx-auto">
         <div class="flex flex-col lg:flex-row gap-12 mb-16 w-full">
           <div class="lg:w-1/4">
@@ -52,7 +23,7 @@ const bottomLinks = ["Terms and conditions", "Cookies", "Privacy policy"]
               Staco is the dedicated platform for performance management that helps to grow your startup quickly
             </p>
             <div class="flex gap-3">
-              <a v-for="(social, i) in socialLinks" :key="i" 
+              <a v-for="(social, i) in socialLinks" :key="i"
                 class="w-11 h-11 rounded-full border border-gray-600 flex items-center justify-center hover:bg-gray-700 transition-colors">
                 <img :src="social.icon" alt="social icon" class="w-5 h-5" />
               </a>
@@ -84,12 +55,14 @@ const bottomLinks = ["Terms and conditions", "Cookies", "Privacy policy"]
           </div>
         </div>
 
-        <AppButton @click="scrollToTop"
-          class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-teal-500/20 border border-teal-500 flex items-center justify-center hover:bg-teal-500/30 transition-colors">
-          <svg class="w-5 h-5 text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-          </svg>
+        <AppButton @click="scrollToTop" class="fixed bottom-8 right-8 w-12 h-12 rounded-full 
+         bg-green-primary/20 border border-green-primary 
+         flex items-center justify-center
+         text-green-primary text-lg font-bold
+         hover:bg-green-primary/50 transition-colors">
+          ↑
         </AppButton>
+
       </div>
     </div>
   </footer>

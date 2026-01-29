@@ -48,7 +48,7 @@ const logos = [Logo1, Logo2, Logo3, Logo4, Logo5]
       </div>
 
       <div class="h-0.5 bg-gray-200 relative overflow-hidden rounded-full">
-        <div :key="activeIndex" class="absolute left-0 top-0 h-full bg-green-500 animate-progress" />
+        <div :key="activeIndex" class="absolute left-0 top-0 h-full bg-green-primary animate-progress" />
       </div>
       <div class="flex  rounded-b-3xl px-6 py-2 md:px-16  md:py-8 justify-between h-fit">
         <div v-for="(logo, index) in logos" :key="index" class="flex justify-center md:w-auto md:h-auto h-12 w-12 items-center">
